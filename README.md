@@ -9,6 +9,9 @@
 
 Este projeto implementa um jogo de memória na qual o jogador precisa encontrar pares de cartas que representam fórmulas matemáticas. As cartas contêm operações matemáticas como adição, subtração, multiplicação, etc. 
 
+## Arquivos
+Consulte a pasta "codigo_fonte" deste repositório para obter os arquivos do projeto.
+
 ## Estrutura do Código
 
 O código está estruturado em três funções principais:
@@ -51,7 +54,7 @@ Para rodar o jogo no navegador usando WebAssembly, será necessário compilar o 
 2. Use o comando `emcc` para compilar:
 
    ```bash
-   emcc window.cpp -o index.html -s USE_SDL=2 -s USE_SDL_TTF=2 -s USE_FREETYPE=1
+   emcc main.cpp -o index.html -s USE_SDL=2 -s USE_SDL_TTF=2 -s USE_FREETYPE=1
    ```
 
    Este comando gerará três arquivos:
