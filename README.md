@@ -21,7 +21,15 @@ window.hpp
 Inconsolata-Medium.ttf --Arquivo de fonte de texto
 
 card.cpp e card.hpp
-Os arquivos card são responsáveis pela criação do objeto carta, que é preenchido com valores de string, com finalidade de serem comparados futuramente no funcionamento do jogo
+Os arquivos card são responsáveis pela criação do objeto carta, que é preenchido com valores de string, com finalidade de serem comparados futuramente no funcionamento do jogo.
+Possuem também as funções de retorno do status da carta (virada ou não), assim como o valor armazenado e também a função flip() que faz com que a carta mude seu estado (Virada para não virada, não virada para virada).
+
+window.hpp e window.cpp
+São os arquivos que possuem as maiores configurações, principalmente em relação ao funcionamento do programa. 
+
+Window.hpp possui a criação das matrizes usadas para o tabuleiro. Obrigatoriamente deve ser utilizadas matrizes de tamanhos tais que o quadrado deste tamanho seja um valor par. A ideia por trás disso é fazer, por exemplo, uma matriz 4x4, com total de 16 posições distintas, onde são preenchidas com pares de cartas. Se, por exemplo, alterassemos o tamanho do tabuleiro para um tabuleiro do tipo 5x5, teríamos 25 posições, o que vai contra a ideia de pares de cartas.
+
+Window.cpp possui o dicionário com os valores que foram utilizados para a criação dos pares de cartas, com as respectivas equações matemáticas. Após isso, é feita a população dos pares de cartas com valores distintos do dicionário. Com isso, embaralhamos as cartas e posicionamos estas no tabuleiro. O funcionamento do jogo se dá, enfim, como um jogo da memória comum. Ao selecionar uma das cartas do tabuleiro, é pedido ao jogador que seja encontrado seu respectivo par. No caso de sucesso, as duas cartas ficam viradas para cima, e o jogo aguarda a ação do jogador para encontrar novos pares. Caso não seja encontrado o par, as duas últimas cartas viradas para cima (que não compõem o par) retornam ao seu estado inicial (viradas para baixo).
 
 main.cpp
 Faz a criação da janela de aplicação, utilizando o objeto window criado em window.cpp e window.hpp, definindo também o título da janela e suas dimensões fixas. O programa por padrão vem com as dimensões definidas em 800x600 pixels. Após feita a criação, também faz o chamado da execução da janela criada, a fim de executar o jogo.
