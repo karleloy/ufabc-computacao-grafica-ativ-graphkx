@@ -3,7 +3,7 @@
 # Discentes
 - Ana Carolina da Silva Martins
 - Karl Eloy Henrique
-- Francisco Yury Pinheiro
+- Francisco Yury Pinheiro Silva
 
 # Memória matemática
 
@@ -11,6 +11,20 @@ Este projeto implementa um jogo de memória na qual o jogador precisa encontrar 
 
 ## Arquivos
 Consulte a pasta "codigo_fonte" deste repositório para obter os arquivos do projeto.
+O programa é baseado nos seguintes arquivos:
+
+card.cpp
+card.hpp
+main.cpp
+window.cpp
+window.hpp
+Inconsolata-Medium.ttf --Arquivo de fonte de texto
+
+card.cpp e card.hpp
+Os arquivos card são responsáveis pela criação do objeto carta, que é preenchido com valores de string, com finalidade de serem comparados futuramente no funcionamento do jogo
+
+main.cpp
+Faz a criação da janela de aplicação, utilizando o objeto window criado em window.cpp e window.hpp, definindo também o título da janela e suas dimensões fixas. O programa por padrão vem com as dimensões definidas em 800x600 pixels. Após feita a criação, também faz o chamado da execução da janela criada, a fim de executar o jogo.
 
 ## Estrutura do Código
 
